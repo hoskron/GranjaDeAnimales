@@ -10,7 +10,15 @@ import java.util.Objects;
 public class Perro extends Animal {
     
     private String raza;
-    
+    /**
+     * Constructor para crear una nueva instancia de Perro.
+     * * @param codigo         El código de identificación único del perro. Debe empezar por 'p'.
+     * @param fechaNacimiento  La fecha de nacimiento del perro.
+     * @param sexo             El sexo del perro ('H' para hembra, 'M' para macho).
+     * @param peso             El peso del perro en kilogramos.
+     * @param raza             La raza del perro. No puede estar vacía.
+     * @throws                 IllegalArgumentException Si el código no empieza por 'p' o si la raza está vacía.
+     */
     public Perro(String codigo, String fechaNacimiento, char sexo, double peso, String raza) throws IllegalArgumentException {
         super(codigo, fechaNacimiento, sexo, peso);
         if ((!codigo.matches("p.*")) || ("".equals(raza))) {

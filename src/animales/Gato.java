@@ -15,6 +15,15 @@ public class Gato extends Animal{
     
     private String raza;
     
+    /**
+     * Constructor para crear una nueva instancia de Gato.
+     * * @param codigo         El código de identificación único del gato. Debe empezar por 'g'.
+     * @param fechaNacimiento  La fecha de nacimiento del gato.
+     * @param sexo             El sexo del gato ('H' para hembra, 'M' para macho).
+     * @param peso             El peso del gato en kilogramos.
+     * @param raza             La raza del gato. No puede estar vacía.
+     * @throws                 IllegalArgumentException Si el código no empieza por 'g' o si la raza está vacía.
+     */
     public Gato(String codigo, String fechaNacimiento, char sexo, double peso, String raza) throws IllegalArgumentException {
         super(codigo, fechaNacimiento, sexo, peso);
         if ((!codigo.matches("g.*")) || ("".equals(raza))) {
